@@ -1,0 +1,332 @@
+:root {
+  --bg-main: #f5f7fb;
+  --bg-soft: #ffffff;
+  --text-main: #10131a;
+  --text-soft: #5f6b7a;
+  --line: rgba(0, 0, 0, 0.08);
+  --card-bg: rgba(255, 255, 255, 0.84);
+  --glass: rgba(255, 255, 255, 0.14);
+  --shadow-main: 0 10px 30px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 18px 40px rgba(0, 0, 0, 0.14);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-main: #0b0e14;
+    --bg-soft: #121722;
+    --text-main: #eef2f7;
+    --text-soft: #a6b0bf;
+    --line: rgba(255, 255, 255, 0.08);
+    --card-bg: rgba(18, 23, 34, 0.88);
+    --glass: rgba(255, 255, 255, 0.08);
+    --shadow-main: 0 10px 30px rgba(0, 0, 0, 0.35);
+    --shadow-hover: 0 20px 45px rgba(0, 0, 0, 0.4);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(13, 110, 253, 0.12), transparent 30%),
+    radial-gradient(circle at top right, rgba(111, 66, 193, 0.12), transparent 30%),
+    var(--bg-main);
+  color: var(--text-main);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.custom-nav {
+  backdrop-filter: blur(12px);
+  background: color-mix(in srgb, var(--bg-main) 82%, transparent);
+}
+
+.navbar-brand,
+.nav-link,
+body,
+.card,
+.accordion,
+.table,
+.offcanvas,
+.modal-content {
+  color: var(--text-main) !important;
+}
+
+.nav-link {
+  color: var(--text-soft) !important;
+}
+
+.nav-link:hover {
+  color: var(--text-main) !important;
+}
+
+.hero-section {
+  position: relative;
+}
+
+.min-vh-75 {
+  min-height: 75vh;
+}
+
+.hero-slide {
+  color: #fff;
+  padding: 2rem 0;
+}
+
+.slide-1 {
+  background: linear-gradient(135deg, #0d6efd, #111827 70%);
+}
+
+.slide-2 {
+  background: linear-gradient(135deg, #111827, #6f42c1 70%);
+}
+
+.slide-3 {
+  background: linear-gradient(135deg, #198754, #0f172a 70%);
+}
+
+.hero-product-img {
+  max-height: 420px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.35));
+  transition: transform 0.35s ease;
+}
+
+.hero-product-img:hover {
+  transform: scale(1.03);
+}
+
+.glass-panel {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+}
+
+.mini-stat {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 18px;
+  padding: 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mini-stat:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+}
+
+.mini-stat h3 {
+  margin-bottom: 0.3rem;
+  font-weight: 700;
+}
+
+.mini-stat p {
+  margin-bottom: 0;
+  opacity: 0.8;
+}
+
+.section-soft {
+  background: color-mix(in srgb, var(--bg-soft) 86%, transparent);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+.feature-card,
+.product-card,
+.accessory-card,
+.summary-panel,
+.compare-box,
+.custom-table,
+.offcanvas,
+.modal-content,
+.accordion-item {
+  background: var(--card-bg) !important;
+  border: 1px solid var(--line) !important;
+  box-shadow: var(--shadow-main);
+}
+
+.text-box-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.text-box-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(13, 110, 253, 0.35) !important;
+}
+
+.feature-card i {
+  color: #0d6efd;
+}
+
+.custom-table .table {
+  --bs-table-bg: transparent;
+  --bs-table-striped-bg: transparent;
+  --bs-table-color: var(--text-main);
+  --bs-table-border-color: var(--line);
+}
+
+.compare-box {
+  background: var(--bg-soft);
+}
+
+.product-card {
+  border-radius: 24px;
+  overflow: hidden;
+}
+
+.featured-product {
+  position: relative;
+}
+
+.featured-product::after {
+  content: "TOP";
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: #ffc107;
+  color: #111;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 0.4rem 0.65rem;
+  border-radius: 999px;
+}
+
+.price-tag {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.product-visual {
+  min-height: 250px;
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(13, 110, 253, 0.16), rgba(111, 66, 193, 0.12));
+  border: 1px solid var(--line);
+  padding: 1rem;
+}
+
+.product-visual-x {
+  background: linear-gradient(135deg, rgba(255, 193, 7, 0.18), rgba(111, 66, 193, 0.18));
+}
+
+.product-img {
+  max-width: 100%;
+  max-height: 210px;
+  object-fit: contain;
+  transition: transform 0.35s ease;
+}
+
+.product-card:hover .product-img,
+.accessory-card:hover .accessory-img {
+  transform: scale(1.04);
+}
+
+.accessory-img {
+  height: 220px;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.list-group-item {
+  color: var(--text-main) !important;
+  border-color: var(--line) !important;
+}
+
+.summary-panel {
+  height: 100%;
+}
+
+.small-box {
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 1rem;
+  background: var(--bg-soft);
+}
+
+footer {
+  background: transparent;
+}
+
+.text-secondary {
+  color: var(--text-soft) !important;
+}
+
+.toast {
+  box-shadow: var(--shadow-main);
+}
+
+.cart-item {
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 0.9rem;
+  margin-bottom: 0.8rem;
+  background: var(--bg-soft);
+}
+
+.cart-item-title {
+  font-weight: 700;
+  margin-bottom: 0.3rem;
+}
+
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.qty-btn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--line);
+  background: transparent;
+  border-radius: 8px;
+  color: var(--text-main);
+}
+
+@media (max-width: 991px) {
+  .min-vh-75 {
+    min-height: auto;
+  }
+
+  .hero-slide {
+    padding: 3rem 0 4rem;
+  }
+
+  .hero-product-img {
+    max-height: 280px;
+  }
+}
+
+@media (max-width: 575px) {
+  .display-4 {
+    font-size: 2rem;
+  }
+
+  .hero-product-img {
+    max-height: 220px;
+  }
+
+  .product-visual {
+    min-height: 180px;
+  }
+
+  .product-img {
+    max-height: 150px;
+  }
+
+  .accessory-img {
+    height: 180px;
+  }
+}
+#productos .row.justify-content-center .col-md-6.col-xl-4 {
+  display: flex;
+}
+
+#productos .row.justify-content-center .accessory-card {
+  width: 100%;
+}

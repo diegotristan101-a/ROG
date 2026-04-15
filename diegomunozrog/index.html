@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="auto">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NovaPlay | ROG Xbox Ally & Ally X</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top custom-nav border-bottom">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">
+        <i class="bi bi-controller me-2"></i>NovaPlay
+      </a>
+
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#menuPrincipal"
+        aria-controls="menuPrincipal"
+        aria-expanded="false"
+        aria-label="Abrir menú"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="menuPrincipal">
+        <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-2">
+          <li class="nav-item"><a class="nav-link" href="#comparativa">Comparativa</a></li>
+          <li class="nav-item"><a class="nav-link" href="#productos">Comprar</a></li>
+          <li class="nav-item"><a class="nav-link" href="#detalles">Resumen</a></li>
+          <li class="nav-item">
+            <button
+              class="btn btn-primary position-relative ms-lg-2"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#cartOffcanvas"
+              aria-controls="cartOffcanvas"
+            >
+              <i class="bi bi-cart3"></i>
+              <span
+                id="cart-count"
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              >0</span>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero-section">
+    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+      </div>
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="hero-slide slide-1">
+            <div class="container">
+              <div class="row min-vh-75 align-items-center g-4">
+                <div class="col-lg-6">
+                  <span class="badge text-bg-primary mb-3">Nueva generación portátil</span>
+                  <h1 class="display-4 fw-bold">ROG Xbox Ally</h1>
+                  <p class="lead">
+                    Diseño cómodo, pantalla fluida y una experiencia portátil clara y moderna.
+                  </p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <a href="#productos" class="btn btn-primary btn-lg">Ver modelos</a>
+                    <a href="#comparativa" class="btn btn-outline-light btn-lg">Comparar</a>
+                  </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                  <img src="imagenes/ROG.png" alt="ROG Xbox Ally blanca" class="hero-product-img img-fluid">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="hero-slide slide-2">
+            <div class="container">
+              <div class="row min-vh-75 align-items-center g-4">
+                <div class="col-lg-6">
+                  <span class="badge text-bg-light text-dark mb-3">Más potencia</span>
+                  <h2 class="display-4 fw-bold">ROG Xbox Ally X</h2>
+                  <p class="lead">
+                    Más memoria, más almacenamiento y mejor batería para una experiencia premium.
+                  </p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <a href="#productos" class="btn btn-light btn-lg">Comprar ahora</a>
+                    <a href="#detalles" class="btn btn-outline-light btn-lg">Ver resumen</a>
+                  </div>
+                </div>
+                <div class="col-lg-6 text-center">
+                  <img src="imagenes/ROGX.png" alt="ROG Xbox Ally X negra" class="hero-product-img img-fluid">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="hero-slide slide-3">
+            <div class="container">
+              <div class="row min-vh-75 align-items-center g-4">
+                <div class="col-lg-6">
+                  <span class="badge text-bg-success mb-3">Compra rápida</span>
+                  <h2 class="display-4 fw-bold">Elige tu versión ideal</h2>
+                  <p class="lead">
+                    Revisa diferencias, precios y agrega productos al carrito de forma simple.
+                  </p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <a href="#comparativa" class="btn btn-success btn-lg">Ver comparación</a>
+                    <button class="btn btn-outline-light btn-lg" data-bs-toggle="offcanvas" data-bs-target="#cartOffcanvas">
+                      Abrir carrito
+                    </button>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="glass-panel p-4">
+                    <div class="row g-3 text-center">
+                      <div class="col-6">
+                        <div class="mini-stat">
+                          <h3>120Hz</h3>
+                          <p>Pantalla FHD</p>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="mini-stat">
+                          <h3>7"</h3>
+                          <p>Formato portátil</p>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="mini-stat">
+                          <h3>512GB</h3>
+                          <p>Ally</p>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="mini-stat">
+                          <h3>1TB</h3>
+                          <p>Ally X</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="py-5">
+      <div class="container">
+        <div class="text-center mb-4">
+          <span class="badge text-bg-secondary mb-2">Lo más importante</span>
+          <h2 class="fw-bold">Diseño simple, moderno y claro</h2>
+          <p class="text-secondary mb-0">
+            Comparativa directa, compra rápida y un diseño adaptable a móvil.
+          </p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-3">
+            <div class="card feature-card h-100 border-0 shadow-sm text-box-hover">
+              <div class="card-body">
+                <i class="bi bi-lightning-charge fs-2 mb-3"></i>
+                <h5 class="card-title">Rendimiento portátil</h5>
+                <p class="card-text">Pensada para jugar en cualquier lugar con buena respuesta.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-3">
+            <div class="card feature-card h-100 border-0 shadow-sm text-box-hover">
+              <div class="card-body">
+                <i class="bi bi-display fs-2 mb-3"></i>
+                <h5 class="card-title">Pantalla fluida</h5>
+                <p class="card-text">Pantalla FHD de 7 pulgadas con 120Hz para una experiencia más suave.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-3">
+            <div class="card feature-card h-100 border-0 shadow-sm text-box-hover">
+              <div class="card-body">
+                <i class="bi bi-hdd-stack fs-2 mb-3"></i>
+                <h5 class="card-title">Más almacenamiento</h5>
+                <p class="card-text">Dos opciones con distinta capacidad para distintos tipos de usuario.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-3">
+            <div class="card feature-card h-100 border-0 shadow-sm text-box-hover">
+              <div class="card-body">
+                <i class="bi bi-bag-check fs-2 mb-3"></i>
+                <h5 class="card-title">Compra directa</h5>
+                <p class="card-text">Botones claros, carrito lateral y una navegación muy simple.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="comparativa" class="py-5 section-soft">
+      <div class="container">
+        <div class="d-flex flex-wrap align-items-center justify-content-between mb-4 gap-3">
+          <div>
+            <span class="badge text-bg-primary mb-2">Comparativa</span>
+            <h2 class="fw-bold mb-1">ROG Xbox Ally vs ROG Xbox Ally X</h2>
+            <p class="text-secondary mb-0">Diferencias clave de una forma rápida.</p>
+          </div>
+        </div>
+
+        <div class="table-responsive custom-table rounded-4 shadow-sm">
+          <table class="table align-middle mb-0">
+            <thead>
+              <tr>
+                <th>Característica</th>
+                <th>ROG Xbox Ally</th>
+                <th>ROG Xbox Ally X</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Procesador</td>
+                <td>AMD Ryzen Z2 A</td>
+                <td>AMD Ryzen AI Z2 Extreme</td>
+              </tr>
+              <tr>
+                <td>Memoria RAM</td>
+                <td>16GB LPDDR5</td>
+                <td>24GB LPDDR5X</td>
+              </tr>
+              <tr>
+                <td>Almacenamiento</td>
+                <td>512GB SSD</td>
+                <td>1TB SSD</td>
+              </tr>
+              <tr>
+                <td>Pantalla</td>
+                <td>7" FHD 120Hz</td>
+                <td>7" FHD 120Hz</td>
+              </tr>
+              <tr>
+                <td>Batería</td>
+                <td>60Wh</td>
+                <td>80Wh</td>
+              </tr>
+              <tr>
+                <td>Precio</td>
+                <td class="fw-bold">$599.99 USD</td>
+                <td class="fw-bold">$999.99 USD</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="row g-4 mt-4">
+          <div class="col-md-6">
+            <div class="p-4 rounded-4 compare-box h-100 text-box-hover">
+              <h5 class="fw-bold">ROG Xbox Ally</h5>
+              <p class="mb-0 text-secondary">
+                Buena opción si quieres un modelo más accesible con buen equilibrio entre potencia y precio.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="p-4 rounded-4 compare-box h-100 text-box-hover">
+              <h5 class="fw-bold">ROG Xbox Ally X</h5>
+              <p class="mb-0 text-secondary">
+                Mejor para quien quiere más rendimiento, más batería y una versión más completa.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="productos" class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <span class="badge text-bg-dark mb-2">Compra</span>
+          <h2 class="fw-bold">Elige tu consola</h2>
+          <p class="text-secondary mb-0">Opciones simples y fáciles de ver.</p>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-lg-6">
+            <div class="card product-card border-0 shadow-sm h-100 text-box-hover">
+              <div class="card-body p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <div>
+                    <span class="badge text-bg-primary mb-2">Base</span>
+                    <h3 class="fw-bold mb-1">ROG Xbox Ally</h3>
+                    <p class="text-secondary mb-0">Ligera, rápida y lista para jugar.</p>
+                  </div>
+                  <div class="price-tag">$599.99</div>
+                </div>
+
+                <div class="product-visual mb-4">
+                  <img src="imagenes/ROG.png" alt="ROG Xbox Ally" class="product-img">
+                </div>
+
+                <ul class="list-group list-group-flush mb-4 small">
+                  <li class="list-group-item bg-transparent px-0">AMD Ryzen Z2 A</li>
+                  <li class="list-group-item bg-transparent px-0">16GB LPDDR5</li>
+                  <li class="list-group-item bg-transparent px-0">512GB SSD</li>
+                  <li class="list-group-item bg-transparent px-0">Pantalla 7" FHD 120Hz</li>
+                  <li class="list-group-item bg-transparent px-0">Batería 60Wh</li>
+                </ul>
+
+                <div class="d-flex gap-2 flex-wrap">
+                  <button
+                    class="btn btn-primary add-to-cart"
+                    data-id="ally"
+                    data-name="ROG Xbox Ally"
+                    data-price="599.99"
+                  >
+                    <i class="bi bi-cart-plus me-1"></i>Agregar al carrito
+                  </button>
+
+                  <button
+                    class="btn btn-outline-primary buy-now"
+                    data-id="ally"
+                    data-name="ROG Xbox Ally"
+                    data-price="599.99"
+                  >
+                    Comprar ahora
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="card product-card border-0 shadow-sm h-100 featured-product text-box-hover">
+              <div class="card-body p-4">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                  <div>
+                    <span class="badge text-bg-warning mb-2">Más potente</span>
+                    <h3 class="fw-bold mb-1">ROG Xbox Ally X</h3>
+                    <p class="text-secondary mb-0">La versión premium de la línea.</p>
+                  </div>
+                  <div class="price-tag">$999.99</div>
+                </div>
+
+                <div class="product-visual mb-4 product-visual-x">
+                  <img src="imagenes/ROGX.png" alt="ROG Xbox Ally X" class="product-img">
+                </div>
+
+                <ul class="list-group list-group-flush mb-4 small">
+                  <li class="list-group-item bg-transparent px-0">AMD Ryzen AI Z2 Extreme</li>
+                  <li class="list-group-item bg-transparent px-0">24GB LPDDR5X</li>
+                  <li class="list-group-item bg-transparent px-0">1TB SSD</li>
+                  <li class="list-group-item bg-transparent px-0">Pantalla 7" FHD 120Hz</li>
+                  <li class="list-group-item bg-transparent px-0">Batería 80Wh</li>
+                </ul>
+
+                <div class="d-flex gap-2 flex-wrap">
+                  <button
+                    class="btn btn-warning add-to-cart"
+                    data-id="allyx"
+                    data-name="ROG Xbox Ally X"
+                    data-price="999.99"
+                  >
+                    <i class="bi bi-cart-plus me-1"></i>Agregar al carrito
+                  </button>
+
+                  <button
+                    class="btn btn-outline-warning buy-now"
+                    data-id="allyx"
+                    data-name="ROG Xbox Ally X"
+                    data-price="999.99"
+                  >
+                    Comprar ahora
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row g-4 mt-2 justify-content-center">
+          <div class="col-md-6 col-xl-4">
+            <div class="card accessory-card border-0 shadow-sm h-100 text-box-hover">
+              <img src="imagenes/ROGCASE.png" class="card-img-top accessory-img" alt="Case Armor">
+              <div class="card-body">
+                <span class="badge text-bg-secondary mb-2">Accesorio</span>
+                <h5>Case Armor</h5>
+                <p class="text-secondary small">Funda rígida para transporte.</p>
+                <div class="fw-bold mb-3">$39.99</div>
+                <button class="btn btn-outline-secondary w-100 add-to-cart" data-id="case" data-name="Case Armor" data-price="39.99">
+                  Agregar
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xl-4">
+            <div class="card accessory-card border-0 shadow-sm h-100 text-box-hover">
+              <img src="imagenes/GLASS.png" class="card-img-top accessory-img" alt="Protector Glass">
+              <div class="card-body">
+                <span class="badge text-bg-secondary mb-2">Accesorio</span>
+                <h5>Protector Glass</h5>
+                <p class="text-secondary small">Protección simple para pantalla.</p>
+                <div class="fw-bold mb-3">$19.99</div>
+                <button class="btn btn-outline-secondary w-100 add-to-cart" data-id="glass" data-name="Protector Glass" data-price="19.99">
+                  Agregar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="detalles" class="py-5 section-soft">
+      <div class="container">
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-6">
+            <span class="badge text-bg-info mb-2">Detalles</span>
+            <h2 class="fw-bold mb-3">Resumen rápido</h2>
+            <p class="text-secondary">
+              Dos modelos, una misma idea: jugar en formato portátil con una interfaz clara, diseño moderno y compra simple.
+            </p>
+
+            <div class="accordion" id="detailsAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#item1">
+                    ¿Qué cambia entre una y otra?
+                  </button>
+                </h2>
+                <div id="item1" class="accordion-collapse collapse show" data-bs-parent="#detailsAccordion">
+                  <div class="accordion-body">
+                    La Ally X mejora procesador, memoria, almacenamiento y batería.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item2">
+                    ¿Cuál conviene más?
+                  </button>
+                </h2>
+                <div id="item2" class="accordion-collapse collapse" data-bs-parent="#detailsAccordion">
+                  <div class="accordion-body">
+                    Si quieres ahorrar más, la Ally. Si quieres la versión más completa, la Ally X.
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#item3">
+                    ¿Se adapta a móvil?
+                  </button>
+                </h2>
+                <div id="item3" class="accordion-collapse collapse" data-bs-parent="#detailsAccordion">
+                  <div class="accordion-body">
+                    Sí, el diseño está pensado para escritorio, tablet y celular.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="summary-panel rounded-4 p-4 shadow-sm text-box-hover">
+              <h4 class="fw-bold mb-3">Versiones disponibles</h4>
+
+              <div class="row g-3">
+                <div class="col-12">
+                  <div class="small-box">
+                    <h6 class="fw-bold mb-1">ROG Xbox Ally</h6>
+                    <p class="mb-0 text-secondary">Versión más equilibrada para entrar al formato portátil.</p>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="small-box">
+                    <h6 class="fw-bold mb-1">ROG Xbox Ally X</h6>
+                    <p class="mb-0 text-secondary">Versión más potente con más autonomía y almacenamiento.</p>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="small-box">
+                    <h6 class="fw-bold mb-1">Accesorios</h6>
+                    <p class="mb-0 text-secondary">Case y protector para completar la compra.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-4 border-top">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+        <div>
+          <h6 class="mb-1 fw-bold">NovaPlay</h6>
+          <small class="text-secondary">Gaming store demo 2026</small>
+        </div>
+        <div class="text-secondary small text-center text-md-end">
+          © 2026 NovaPlay. Todos los derechos reservados.
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="cartOffcanvas" aria-labelledby="cartOffcanvasLabel">
+    <div class="offcanvas-header">
+      <h5 id="cartOffcanvasLabel" class="fw-bold">Tu carrito</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+    </div>
+    <div class="offcanvas-body d-flex flex-column">
+      <div id="cart-items" class="flex-grow-1">
+        <p class="text-secondary" id="empty-cart">Tu carrito está vacío.</p>
+      </div>
+
+      <div class="border-top pt-3">
+        <div class="d-flex justify-content-between mb-2">
+          <span>Subtotal</span>
+          <strong id="cart-total">$0.00</strong>
+        </div>
+        <button id="checkout-cart" class="btn btn-primary w-100 mb-2">
+          Finalizar pago
+        </button>
+        <button id="clear-cart" class="btn btn-outline-secondary w-100">Vaciar carrito</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="cartToast" class="toast align-items-center text-bg-dark border-0" role="alert">
+      <div class="d-flex">
+        <div class="toast-body">
+          Producto agregado al carrito.
+        </div>
+        <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast"></button>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
